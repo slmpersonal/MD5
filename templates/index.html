@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greetings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+<h1>MD5-algorithm</h1>
+<a href="{{ url_for('hash_string') }}">Hash message</a>
+<a href="{{ url_for('hash_files') }}">Check file checksums</a>
+</body>
+</html>

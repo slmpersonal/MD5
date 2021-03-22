@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+     initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>MD5-algorithm</title>
+</head>
+<body>
+<h1>MD5: hash string</h1>
+<h2>Enter your message:</h2>
+<form method="post" action="/add_message">
+    <input type="text" name="text">
+    <button>Encrypt</button>
+</form>
+
+<h2>Message:</h2>
+<div>{{ message }}</div>
+
+<h2>Result:</h2>
+<div>{{ hash_message }}</div>
+</br>
+</br>
+<a href="{{ url_for('index') }}">Main page</a>
+
+</body>
+</html>
