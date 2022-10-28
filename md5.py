@@ -107,7 +107,12 @@ def md5(msg):
 
 
 def md5_to_hex(dig):
-    raw = dig.to_bytes(16, byteorder='little')
+    try:
+        raw = dig.to_bytes(16, byteorder='little')
+    except:
+        dig = "0" + str(hex(dig))[2:]
+        dig = int(dig[2:],16)
+        raw = dig.to_bytes(16, byteorder='little')
     return '{:032x}'.format(int.from_bytes(raw, byteorder='big'))
 
 
